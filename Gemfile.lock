@@ -1,0 +1,28 @@
+GIT
+  remote: https://github.com/jyllsarta/ruby_hid_api
+  revision: e7808d72957eb9e56071f80e2bb138962a883376
+  specs:
+    hid_api (0.1.2)
+      ffi (~> 1.9)
+
+GIT
+  remote: https://github.com/kurain/co2mini
+  revision: c58086d0a6485d5d18960388a0ff89527b893ac8
+  specs:
+    co2mini (0.1.0)
+      hid_api
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    ffi (1.11.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  co2mini!
+  hid_api!
+
+BUNDLED WITH
+   1.16.4
