@@ -1,13 +1,13 @@
 GIT
   remote: https://github.com/jyllsarta/co2mini
-  revision: d28995603f5eb3700014779b62a579e95320d18d
+  revision: 20418c07657551156789cec55495ffb9fcec16b0
   specs:
     co2mini (0.1.0)
       hid_api
 
 GIT
   remote: https://github.com/jyllsarta/ruby_hid_api
-  revision: e7808d72957eb9e56071f80e2bb138962a883376
+  revision: 03d0ee58bab82128d7bf43d006e9b525977ac435
   specs:
     hid_api (0.1.2)
       ffi (~> 1.9)
