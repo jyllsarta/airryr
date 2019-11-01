@@ -6,7 +6,7 @@ class CO2miniMock
   end
 
   def read_once(read_type)
-    read_type == :temp ? Random.rand(4) + 20 : Random.rand(100) + 500
+    read_type == :temp ? Random.rand(20..25) : Random.rand(500..600)
   end
 
   def on(event, &block)
@@ -14,7 +14,7 @@ class CO2miniMock
   end
 
   def loop
-    while true do
+    Kernel.loop do
       Kernel.sleep(1)
       @handlers[:co2].call(:co2, self.read_once(:co2))
       Kernel.sleep(1)
