@@ -5,7 +5,7 @@ require 'dotenv/load'
 require 'net/https'
 require "json"
 
-class Airrir
+class Airryr
   def initialize(watcher_class)
     @watcher = watcher_class.new
     @log_buffer = []
@@ -49,6 +49,6 @@ class Airrir
   end
 end
 
-# TODO: 起動時に引数とって `bundle exec airrir forever` とかできると便利っぽい
-airrir = Airrir.new(CO2mini)
-airrir.forever
+# TODO: 起動時に引数とって `bundle exec airryr forever` とかできると便利っぽい
+airryr = Airryr.new(CO2mini)
+airryr.forever
