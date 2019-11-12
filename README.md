@@ -1,6 +1,6 @@
 # Airryr
 
-https://github.com/kurain/co2mini を利用し、Mackerelと連携した二酸化炭素濃度監視bot
+https://github.com/kurain/co2mini を利用し、Mackerel と連携した二酸化炭素濃度監視bot
 
 ## environment
 
@@ -14,7 +14,7 @@ Mackerel のサービスメトリックに二酸化炭素濃度と気温をPOST�
 ![service_metric](https://user-images.githubusercontent.com/5991227/68680366-e56b2080-05a4-11ea-9c63-2a51d5c5844b.png)
 
 Mackerel 側の各種インテグレーションやWebhook 通知と連携することで、君だけの最強換気システムを構築しよう！
-twitterで怒ってほしいときは、Mackerel の Webhook 通知を受け取ってtwitter でリプライを飛ばさせるsinatraアプリケーション https://github.com/jyllsarta/airryr_web をどうぞ。
+twitterで怒ってほしいときは、Mackerel のWebhook 通知を受け取ってtwitter でリプライを飛ばさせるsinatraアプリケーション https://github.com/jyllsarta/airryr_web をどうぞ。
 
 ## 前提となる環境構築
 
@@ -25,7 +25,6 @@ https://github.com/kurain/co2mini/blob/master/README を参考に作業すると
 ### install libraries
 
 ```shell
-sudo apt-get install libhidapi-hidraw0
 sudo apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev autoconf libc6-dev ncurses-dev automake libtool git libhidapi-hidraw0
 sudo apt-get install ruby2.1 ruby2.1-dev git # rubyインストール済なら不要
 sudo apt-get install usbutils
@@ -52,7 +51,6 @@ tail -2 /var/log/co2.tsv
 git clone https://github.com/jyllsarta/airryr.git
 cd airryr
 bundle install
-bundle exec ruby airryr.rb &>> airryr.log &
 ```
 
 ### edit .env
@@ -66,7 +64,7 @@ vim .env
 - MACKEREL_SERVICE_NAME=xxxxxxxx
 - MACKEREL_API_KEY=XxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXxXx
 + MACKEREL_SERVICE_NAME=your_mackerel_service_name
-+ MACKEREL_API_KEY=YoUrMaCkErElApIkEy
++ MACKEREL_API_KEY=YoUrMaCkErElApIkEy00000000000000000000000000
 ```
 
 ### 動作確認
